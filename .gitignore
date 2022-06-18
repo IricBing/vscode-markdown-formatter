@@ -3,3 +3,5 @@ out/**
 todo
 node_modules
 dist/**
+
+*.vsix
