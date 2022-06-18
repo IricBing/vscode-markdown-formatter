@@ -60,7 +60,7 @@ const PUNCTUATION_SPACIAL_ENGLISH_EXP = /([\.\!\?\:])([A-Z\u4e00-\u9fa5])/g;
 // h1 symbol
 const H1_EXP = /\n+(# [^\n]+)\n*/g;
 // h2,h3,h4... symbol
-const H_EXP = /\n+(##+ [^\n]+)\n/g;
+const H_EXP = /\n+(##+ [^\n]+)\n+/g;
 // table
 const TABLE_EXP = /((?:(?:[^\n]*?\|[^\n]*)\ *)?(?:\r?\n|^))(?:[^|]+)((?:\|\ *(?::?-+:?|::)\ *|\|?(?:\ *(?::?-+:?|::)\ *\|)+)(?:\ *(?::?-+:?|::)\ *)?\ *\r?\n)((?:(?:[^\n]*?\|[^\n]*)\ *(?:\r?\n|$))+)/g;
 //back quote
@@ -190,6 +190,7 @@ export function formatted(textP: string): string {
         text = text.replace(EXTRALINE_EXP, '\n\n')
 
         text = text.replace(BACK_QUOTE_AFTER_BREAKLINE_EXP, '\n`$1` ')
+        // TODO: fix 换行过多
         text = text.replace(H_EXP, '\n\n' + '$1' + '\n\n')
         // text = text.replace(H1_EXP, '$1' + '\n\n')
         text = text.replace(IMG_EXP, '$1\n\n' + '$2' + '\n\n')
