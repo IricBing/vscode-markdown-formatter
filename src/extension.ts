@@ -110,7 +110,7 @@ const CODE_AREA_EXP = /\n+((?:(?: {4}|\t)[^\n]*\n)+)/g;
 const CODE_BLOCK_EXP = /\n*```(?: *)(\w*)\n([\s\S]+?)(```)+\n+/g
 
 // * 行内代码块：`code`
-const INLINE_CODE_EXP = /\`(.+)\`/g
+const INLINE_CODE_EXP = /\s*\`(.+)\`\s*/g
 
 // line-break
 const LINE_BREAK_EXP = /\r\n/g;

@@ -1,3 +1,9 @@
+# v0.0.6 20220618
+
+## fix
+
+1. 修复行内代码块重复增加首位空格bug。
+
 # v0.0.5 20220618
 
 ## feature
@@ -8,11 +14,11 @@
 
 ## feature
 
-1. 增加`docsify`高亮块支持。
+1. 增加 `docsify` 高亮块支持。
 
 ## optimize
 
-1. 优化`H1`标签换行。
+1. 优化 `H1` 标签换行。
 
 # v0.0.3 20220618
 
@@ -29,4 +35,4 @@ test
 ## feature
 
 1. 从[markdown-formatter v0.9.7](https://github.com/sumnow/markdown-formatter)迁移。
-2. 将代码块全部修改为`docsify`可识别的代码。
+2. 将代码块全部修改为 `docsify` 可识别的代码。
