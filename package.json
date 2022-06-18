@@ -1,0 +1,126 @@
+{
+    "name": "markdown-formatter",
+    "displayName": "markdown-formatter",
+    "description": " A Markdown Plugin for code artist",
+    "version": "0.0.1",
+    "icon": "icon.png",
+    "publisher": "IricBing",
+    "keywords": [
+        "Markdown",
+        "Formatters"
+    ],
+    "categories": [
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onLanguage:markdown"
+    ],
+    "main": "./dist/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Markdown Formatter",
+            "properties": {
+                "markdownFormatter.fullWidthTurnHalfWidth": {
+                    "type": "string",
+                    "default": "auto",
+                    "description": "Unify full-width (，：；！“”‘’（）？。) as a half-width character(,:;!''()?.)."
+                },
+                "markdownFormatter.codeAreaToBlock": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Convert code area to code block"
+                },
+                "markdownFormatter.displayTime": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Display time before article"
+                },
+                "markdownFormatter.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable markdown-formatter."
+                },
+                "markdownFormatter.formatCodes": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "set false to stop all code format"
+                },
+                "markdownFormatter.formatTable": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Format the table, if the table contains pictures or different languages, please do not open this"
+                },
+                "markdownFormatter.formatOpt": {
+                    "type": "object",
+                    "default": {},
+                    "description": "config as js-beautify options"
+                },
+                "markdownFormatter.formatULSymbol": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable/disable formatted unordered list symbol."
+                },
+                "markdownFormatter.spaceAfterFullWidthOrHalfWidth": {
+                    "type": "string",
+                    "default": "half",
+                    "enum": [
+                        "half",
+                        "full",
+                        "all",
+                        "neither"
+                    ],
+                    "description": " `full` will insert a space after the full-width symbol , `half` , `all` or `neither`"
+                }
+            }
+        },
+        "snippets": [
+            {
+                "language": "markdown",
+                "path": "./snippets/markdown.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/IricBing/vscode-markdown-formatter.git"
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run package",
+		"compile": "webpack",
+        "npm:watch": "webpack --watch",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "yarn run test-compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.57.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "14.x",
+        "eslint": "^7.27.0",
+        "@typescript-eslint/eslint-plugin": "^4.26.0",
+        "@typescript-eslint/parser": "^4.26.0",
+        "glob": "^7.1.7",
+        "mocha": "^8.4.0",
+        "typescript": "^4.3.2",
+        "vscode-test": "^1.5.2",
+        "ts-loader": "^9.2.2",
+        "webpack": "^5.38.1",
+        "webpack-cli": "^4.7.0"
+    },
+    "dependencies": {
+        "escape-string-regexp": "^1.0.5",
+        "js-beautify": "^1.8.8"
+    }
+}

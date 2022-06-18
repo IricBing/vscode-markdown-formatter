@@ -1,0 +1,171 @@
+{
+    "Format Current File Disable": {
+        "prefix": [
+            "disable"
+        ],
+        "body": [
+            "<!-- /* md-file-format-disable */ -->"
+        ],
+        "description": "insert disabled line"
+    },
+    "Create Image": {
+        "prefix": [
+            "img",
+            "image"
+        ],
+        "body": [
+            "![${2:img}](${1:${TM_FILEPATH}})"
+        ],
+        "description": "create image tag"
+    },
+    "Create Table": {
+        "prefix": "table",
+        "body": [
+            "${1:title}|${2:title}|${3:title}\n-----|-----|-----\n${4:conte}|${5:conte}|${6:conte}"
+        ],
+        "description": "create table tag"
+    },
+    "Create JS": {
+        "prefix": [
+            "js",
+            "javascript"
+        ],
+        "body": [
+            "```js\n${1://JavaScript}\n```\n$2"
+        ],
+        "description": "create ECMAScript code block"
+    },
+    "Create HTML": {
+        "prefix": "html",
+        "body": [
+            "```html\n${1:<!-- HTML -->}\n```\n$2"
+        ],
+        "description": "create HTML code block"
+    },
+    "Create CSS": {
+        "prefix": "css",
+        "body": [
+            "```css\n${1:/* CSS */}\n```\n$2"
+        ],
+        "description": "create CSS code block"
+    },
+    "Create Dart": {
+        "prefix": "dart",
+        "body": [
+            "```dart\n${1:// Dart}\n```\n$2"
+        ],
+        "description": "create Dart code block"
+    },
+    "Create C Language": {
+        "prefix": "clang",
+        "body": [
+            "```c\n${1:/* C */}\n```\n$2"
+        ],
+        "description": "create C code block"
+    },
+    "Create Java": {
+        "prefix": "java",
+        "body": [
+            "```java\n${1:// JAVA}\n```\n$2"
+        ],
+        "description": "create Java code block"
+    },
+    "Create Python": {
+        "prefix": "python",
+        "body": [
+            "```python\n${1:# Python}\n```\n$2"
+        ],
+        "description": "create Python code block"
+    },
+    "Create Go": {
+        "prefix": "go",
+        "body": [
+            "```go\n${1:// Go}\n```\n$2"
+        ],
+        "description": "create Go code block"
+    },
+    "Create bash": {
+        "prefix": "bash",
+        "body": [
+            "```bash\n${1:# BASH}\n```\n$2"
+        ],
+        "description": "create Bash code block"
+    },
+    "Create shell": {
+        "prefix": "shell",
+        "body": [
+            "```shell\n${1:# BASH}\n```\n$2"
+        ],
+        "description": "create Bash code block"
+    },
+    "Create sh": {
+        "prefix": "sh",
+        "body": [
+            "```sh\n${1:# BASH}\n```\n$2"
+        ],
+        "description": "create Bash code block"
+    },
+    "Create assembly": {
+        "prefix": "asm",
+        "body": [
+            "```asm\n${1:; asm}\n```\n$2"
+        ],
+        "description": "create Assembly language block"
+    },
+    "Create SQL ": {
+        "prefix": "sql",
+        "body": [
+            "```sql\n${1:/* SQL */}\n```\n$2"
+        ],
+        "description": "create Assembly language block"
+    },
+    
+    "Create Code": {
+        "prefix": "code",
+        "body": [
+            "```code\n${1:// code}\n```\n$2"
+        ],
+        "description": "create code block"
+    },
+    "Create Unordered List": {
+        "prefix": "ul",
+        "body": [
+            "- ${1:one}\n- ${2:two}\n- ${3:three}"
+        ],
+        "description": "create unordered list"
+    },
+    "Create Ordered List": {
+        "prefix": "ol",
+        "body": [
+            "1. ${1:first}\n2. ${2:second}\n3. ${3:thrid}"
+        ],
+        "description": "create ordered list"
+    },
+    "Create Time": {
+        "prefix": [
+            "time"
+        ],
+        "body": [
+            "$CURRENT_DAY_NAME $CURRENT_MONTH_NAME $CURRENT_DATE, $CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND "
+        ],
+        "description": "time now"
+    },
+    "Create Time as y/m/d h:m:s": {
+        "prefix": [
+            "ymd"
+        ],
+        "body": [
+            "$CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME "
+        ],
+        "description": "time now"
+    },
+    "Create Time as m/d/y h:m:s": {
+        "prefix": [
+            "mdy"
+        ],
+        "body": [
+            "$CURRENT_MONTH_NAME/$CURRENT_DATE/$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND  $CURRENT_DAY_NAME "
+        ],
+        "description": "time now"
+    }
+}
