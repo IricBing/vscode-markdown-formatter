@@ -192,7 +192,7 @@ export function formatted(textP: string): string {
         text = text.replace(BACK_QUOTE_AFTER_BREAKLINE_EXP, '\n`$1` ')
         // TODO: fix 换行过多
         text = text.replace(H_EXP, '\n\n' + '$1' + '\n\n')
-        // text = text.replace(H1_EXP, '$1' + '\n\n')
+        text = text.replace(H1_EXP, '\n\n' + '$1' + '\n\n')
         text = text.replace(IMG_EXP, '$1\n\n' + '$2' + '\n\n')
         text = text.replace(CODE_BLOCK_EXP, '\n\n```' + '$1\n$2' + '```\n\n')
         // text = text.replace(LINK_EXP, '\n\n' + '$1' + '\n\n')

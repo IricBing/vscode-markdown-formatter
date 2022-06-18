@@ -8,6 +8,30 @@
         ],
         "description": "insert disabled line"
     },
+    "Create Docsify Note":{
+        "prefix": "note",
+        "body":[
+            "> [!note|label: ${1:note}]\n> ${2:note内容}"
+        ]
+    },
+    "Create Docsify Tip":{
+        "prefix": "tip",
+        "body":[
+            "> [!tip|label: ${1:提示}]\n> ${2:提示内容}"
+        ]
+    },
+    "Create Docsify Warning":{
+        "prefix": "warning",
+        "body":[
+            "> [!warning|label: ${1:注意}]\n> ${2:注意内容}"
+        ]
+    },
+    "Create Docsify attention":{
+        "prefix": "attention",
+        "body":[
+            "> [!attention|label: ${1:警告}]\n> ${2:警告内容}"
+        ]
+    },
     "Create Image": {
         "prefix": [
             "img",

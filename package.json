@@ -2,7 +2,7 @@
     "name": "iricbing-markdown-formatter",
     "displayName": "Markdown Formatter",
     "description": " A Markdown Plugin for code artist",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "icon": "icon.png",
     "publisher": "IricBing",
     "keywords": [
