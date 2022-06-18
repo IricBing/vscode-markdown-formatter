@@ -109,6 +109,9 @@ const CODE_AREA_EXP = /\n+((?:(?: {4}|\t)[^\n]*\n)+)/g;
 
 const CODE_BLOCK_EXP = /\n*```(?: *)(\w*)\n([\s\S]+?)(```)+\n+/g
 
+// * 行内代码块：`code`
+const INLINE_CODE_EXP = /\`(.+)\`/g
+
 // line-break
 const LINE_BREAK_EXP = /\r\n/g;
 
@@ -195,6 +198,7 @@ export function formatted(textP: string): string {
         text = text.replace(H1_EXP, '\n\n' + '$1' + '\n\n')
         text = text.replace(IMG_EXP, '$1\n\n' + '$2' + '\n\n')
         text = text.replace(CODE_BLOCK_EXP, '\n\n```' + '$1\n$2' + '```\n\n')
+        text = text.replace(INLINE_CODE_EXP, ' `' + '$1' + '` ')
         // text = text.replace(LINK_EXP, '\n\n' + '$1' + '\n\n')
         // text = text.replace(LINK_SPACE_EXP, '\n' + '$1 $2')
 
